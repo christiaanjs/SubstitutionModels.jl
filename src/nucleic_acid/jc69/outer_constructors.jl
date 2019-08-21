@@ -1,5 +1,5 @@
 JC69() = JC69rel()
-JC69(λ::F, safe::Bool=true) where F <: Float64 = JC69abs(λ, safe)
+JC69(λ::F, safe::Bool=true) where F <: Real = JC69abs(λ, safe)
 
 
 function JC69(θ_vec::A,

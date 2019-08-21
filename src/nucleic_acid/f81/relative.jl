@@ -1,9 +1,9 @@
 struct F81rel <: F81
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function F81rel(πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function F81rel(πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if sum([πA,πC,πG,πT]) != 1.0
@@ -42,7 +42,7 @@ end
 end
 
 
-@inline function P(mod::F81rel, t::Float64)
+@inline function P(mod::F81rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end

@@ -1,12 +1,12 @@
 struct TN93rel <: TN93
-  κ1::Float64
-  κ2::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function TN93rel(κ1::Float64, κ2::Float64,
-                   πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  κ1::Real
+  κ2::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function TN93rel(κ1::Real, κ2::Real,
+                   πA::Real, πC::Real, πG::Real, πT::Real,
                    safe::Bool=true)
     if safe
       if κ1 <= 0.
@@ -55,7 +55,7 @@ end
 end
 
 
-@inline function P(mod::TN93rel, t::Float64)
+@inline function P(mod::TN93rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end

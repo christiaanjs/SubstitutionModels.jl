@@ -1,16 +1,16 @@
 struct GTRrel <: GTR
-  α::Float64
-  β::Float64
-  γ::Float64
-  δ::Float64
-  ϵ::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function GTRrel(α::Float64, β::Float64, γ::Float64,
-                  δ::Float64, ϵ::Float64,
-                  πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  α::Real
+  β::Real
+  γ::Real
+  δ::Real
+  ϵ::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function GTRrel(α::Real, β::Real, γ::Real,
+                  δ::Real, ϵ::Real,
+                  πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if α <= 0.

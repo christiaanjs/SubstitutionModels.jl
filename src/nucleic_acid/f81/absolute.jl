@@ -1,11 +1,11 @@
 struct F81abs <: F81
-  β::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function F81abs(β::Float64,
-                  πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  β::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function F81abs(β::Real,
+                  πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if β <= 0.
@@ -47,7 +47,7 @@ end
 end
 
 
-@inline function P(mod::F81abs, t::Float64)
+@inline function P(mod::F81abs, t::Real)
   if t < 0.0
     error("t must be positive")
   end

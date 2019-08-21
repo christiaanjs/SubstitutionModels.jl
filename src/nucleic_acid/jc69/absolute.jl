@@ -1,6 +1,6 @@
 struct JC69abs <: JC69
-    λ::Float64
-    function JC69abs(λ::Float64, safe::Bool=true)
+    λ::Real
+    function JC69abs(λ::Real, safe::Bool=true)
         if safe
           if λ <= 0.
               error("JC69 parameter λ must be positive")
@@ -28,7 +28,7 @@ function Q(mod::JC69abs)
 end
 
 
-function P(mod::JC69abs, t::Float64)
+function P(mod::JC69abs, t::Real)
   if t < 0.0
     error("t must be positive")
   end

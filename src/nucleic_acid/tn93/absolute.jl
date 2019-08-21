@@ -1,13 +1,13 @@
 struct TN93abs <: TN93
-  α1::Float64
-  α2::Float64
-  β::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function TN93abs(α1::Float64, α2::Float64, β::Float64,
-                   πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  α1::Real
+  α2::Real
+  β::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function TN93abs(α1::Real, α2::Real, β::Real,
+                   πA::Real, πC::Real, πG::Real, πT::Real,
                    safe::Bool=true)
     if safe
       if α1 <= 0.
@@ -58,7 +58,7 @@ end
 end
 
 
-@inline function P(mod::TN93abs, t::Float64)
+@inline function P(mod::TN93abs, t::Real)
   if t < 0.0
     error("t must be positive")
   end

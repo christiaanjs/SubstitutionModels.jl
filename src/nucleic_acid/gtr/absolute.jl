@@ -1,17 +1,17 @@
 struct GTRabs <: GTR
-  α::Float64
-  β::Float64
-  γ::Float64
-  δ::Float64
-  ϵ::Float64
-  η::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function GTRabs(α::Float64, β::Float64, γ::Float64,
-                  δ::Float64, ϵ::Float64, η::Float64,
-                  πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  α::Real
+  β::Real
+  γ::Real
+  δ::Real
+  ϵ::Real
+  η::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function GTRabs(α::Real, β::Real, γ::Real,
+                  δ::Real, ϵ::Real, η::Real,
+                  πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if α <= 0.

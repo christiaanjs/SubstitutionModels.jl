@@ -15,13 +15,13 @@ abstract type NucleicAcidSubstitutionModel <: SubstitutionModel end
 const NASM = NucleicAcidSubstitutionModel
 
 
-const Qmatrix = SMatrix{4, 4, Float64}
+const Qmatrix = SMatrix{4, 4, Real}
 
 
-const Pmatrix = SMatrix{4, 4, Float64}
+const Pmatrix = SMatrix{4, 4, Real}
 
 
-function Base.convert(::Type{T}, θ::F...; safe::Bool=true) where {T <: NASM, F <: Float64}
+function Base.convert(::Type{T}, θ::F...; safe::Bool=true) where {T <: NASM, F <: Real}
   return T(θ..., safe)
 end
 

@@ -1,11 +1,11 @@
 struct HKY85rel <: HKY85
-  κ::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function HKY85rel(κ::Float64,
-                    πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  κ::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function HKY85rel(κ::Real,
+                    πA::Real, πC::Real, πG::Real, πT::Real,
                     safe::Bool=true)
     if safe
       if κ <= 0.
@@ -51,7 +51,7 @@ end
 end
 
 
-@inline function P(mod::HKY85rel, t::Float64)
+@inline function P(mod::HKY85rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end

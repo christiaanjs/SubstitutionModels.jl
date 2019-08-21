@@ -9,14 +9,14 @@ end
 @inline function Q(mod::JC69rel)
   Q₁ =  0.25
   Q₂ = -(Q₁ * 3)
-  return SMatrix{4, 4, Float64}(Q₂, Q₁, Q₁, Q₁,
+  return SMatrix{4, 4, Real}(Q₂, Q₁, Q₁, Q₁,
                                 Q₁, Q₂, Q₁, Q₁,
                                 Q₁, Q₁, Q₂, Q₁,
                                 Q₁, Q₁, Q₁, Q₂)
 end
 
 
-@inline function P(mod::JC69rel, t::Float64)
+@inline function P(mod::JC69rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end

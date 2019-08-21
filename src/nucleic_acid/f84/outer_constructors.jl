@@ -1,12 +1,12 @@
 F84(κ::F,
     πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
   F84rel(κ, πA, πC, πG, πT, safe)
 
 
 F84(κ::F, β::F,
     πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
   F84abs(κ, β, πA, πC, πG, πT, safe)
 
 

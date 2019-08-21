@@ -1,7 +1,7 @@
-K80(κ::Float64, safe::Bool=true) = K80rel(κ, safe)
+K80(κ::Real, safe::Bool=true) = K80rel(κ, safe)
 
 
-K80(α::Float64, β::Float64, safe::Bool=true) = K80abs(α, β, safe)
+K80(α::Real, β::Real, safe::Bool=true) = K80abs(α, β, safe)
 
 
 function K80(θ_vec::A,

@@ -1,6 +1,6 @@
 struct K80rel <: K80
-  κ::Float64
-  function K80rel(κ::Float64,
+  κ::Real
+  function K80rel(κ::Real,
                   safe::Bool=true)
     if safe
       if κ <= 0.
@@ -32,7 +32,7 @@ end
 end
 
 
-@inline function P(mod::K80rel, t::Float64)
+@inline function P(mod::K80rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end

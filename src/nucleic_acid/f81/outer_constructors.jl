@@ -1,11 +1,11 @@
 F81(πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
 F81rel(πA, πC, πG, πT)
 
 
 F81(β::F,
     πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
 F81abs(β, πA, πC, πG, πT, safe)
 
 

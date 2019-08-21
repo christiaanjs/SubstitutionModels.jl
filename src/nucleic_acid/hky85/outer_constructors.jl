@@ -1,12 +1,12 @@
 HKY85(κ::F,
       πA::F, πC::F, πG::F, πT::F,
-      safe::Bool=true) where F <: Float64 =
+      safe::Bool=true) where F <: Real =
   HKY85rel(κ, πA, πC, πG, πT, safe)
 
 
 HKY85(α::F, β::F,
       πA::F, πC::F, πG::F, πT::F,
-      safe::Bool=true) where F <: Float64 =
+      safe::Bool=true) where F <: Real =
   HKY85abs(α, β, πA, πC, πG, πT, safe)
 
 

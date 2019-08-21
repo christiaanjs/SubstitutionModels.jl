@@ -1,12 +1,12 @@
 GTR(α::F, β::F, γ::F, δ::F, ϵ::F, η::F,
     πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
   GTRabs(α, β, γ, δ, ϵ, η, πA, πC, πG, πT, safe)
 
 
 GTR(α::F, β::F, γ::F, δ::F, ϵ::F,
     πA::F, πC::F, πG::F, πT::F,
-    safe::Bool=true) where F <: Float64 =
+    safe::Bool=true) where F <: Real =
   GTRrel(α, β, γ, δ, ϵ, πA, πC, πG, πT, safe)
 
 

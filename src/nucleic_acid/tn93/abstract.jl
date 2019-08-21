@@ -7,6 +7,6 @@ const _πG(mod::TN93) = mod.πG
 const _πT(mod::TN93) = mod.πT
 
 
-function P(mod::TN93, t::Array{Float64})
+function P(mod::TN93, t::Array{Real})
   return [P(mod, i) for i in t]
 end

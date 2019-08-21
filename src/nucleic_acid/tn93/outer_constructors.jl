@@ -1,7 +1,7 @@
-TN93(α1::F, α2::F, β::F, πA::F, πC::F, πG::F, πT::F, safe::Bool=true) where F <: Float64 = TN93abs(α1, α2, β, πA, πC, πG, πT, safe)
+TN93(α1::F, α2::F, β::F, πA::F, πC::F, πG::F, πT::F, safe::Bool=true) where F <: Real = TN93abs(α1, α2, β, πA, πC, πG, πT, safe)
 
 
-TN93(κ1::F, κ2::F, πA::F, πC::F, πG::F, πT::F, safe::Bool=true) where F <: Float64 = TN93rel(κ1, κ2, πA, πC, πG, πT, safe)
+TN93(κ1::F, κ2::F, πA::F, πC::F, πG::F, πT::F, safe::Bool=true) where F <: Real = TN93rel(κ1, κ2, πA, πC, πG, πT, safe)
 
 
 function TN93(θ_vec::A,

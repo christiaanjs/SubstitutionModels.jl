@@ -60,7 +60,7 @@ scale_generic(mod::NASM) = 1/(-diag(Q(mod))' * _π(mod))
 _scale(mod::NASM) = scale_generic(mod)
 
 
-@inline function P_generic(mod::NASM, t::Float64)
+@inline function P_generic(mod::NASM, t::Real)
     if t < 0.0
         error("t must be positive")
     end
@@ -77,7 +77,7 @@ function P_generic(mod::NASM, t, scale::Bool)
 end
 
 
-function P_generic(mod::NASM, t::Array{Float64})
+function P_generic(mod::NASM, t::Array{Real})
     if any(t .< 0.0)
         error("t must be positive")
     end

@@ -1,12 +1,12 @@
 struct HKY85abs <: HKY85
-  α::Float64
-  β::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function HKY85abs(α::Float64, β::Float64,
-                    πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  α::Real
+  β::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function HKY85abs(α::Real, β::Real,
+                    πA::Real, πC::Real, πG::Real, πT::Real,
                     safe::Bool=true)
     if safe
       if α <= 0.
@@ -55,7 +55,7 @@ end
 
 
 
-@inline function P(mod::HKY85abs, t::Float64)
+@inline function P(mod::HKY85abs, t::Real)
   if t < 0.0
     error("t must be positive")
   end

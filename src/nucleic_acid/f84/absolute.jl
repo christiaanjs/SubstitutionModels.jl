@@ -1,12 +1,12 @@
 struct F84abs <: F84
-  κ::Float64
-  β::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function F84abs(κ::Float64, β::Float64,
-                  πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  κ::Real
+  β::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function F84abs(κ::Real, β::Real,
+                  πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if κ <= 0.
@@ -58,7 +58,7 @@ end
 end
 
 
-@inline function P(mod::F84abs, t::Float64)
+@inline function P(mod::F84abs, t::Real)
   if t < 0.0
     error("t must be positive")
   end

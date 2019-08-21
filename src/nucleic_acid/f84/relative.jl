@@ -1,11 +1,11 @@
 struct F84rel <: F84
-  κ::Float64
-  πA::Float64
-  πC::Float64
-  πG::Float64
-  πT::Float64
-  function F84rel(κ::Float64,
-                  πA::Float64, πC::Float64, πG::Float64, πT::Float64,
+  κ::Real
+  πA::Real
+  πC::Real
+  πG::Real
+  πT::Real
+  function F84rel(κ::Real,
+                  πA::Real, πC::Real, πG::Real, πT::Real,
                   safe::Bool=true)
     if safe
       if κ <= 0.
@@ -55,7 +55,7 @@ end
 end
 
 
-@inline function P(mod::F84rel, t::Float64)
+@inline function P(mod::F84rel, t::Real)
   if t < 0.0
     error("t must be positive")
   end
